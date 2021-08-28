@@ -53,7 +53,7 @@ align-items: center;
 } */
 
 .btn {
-   top: -30%;
+   /* top: -80%; */
    width: 200px;
    height: 60px;
    font-size: 1.5rem;
@@ -64,7 +64,7 @@ align-items: center;
    cursor: pointer;
    /*border: none;
    */position: relative;
-   color: rgb(238, 29, 29);
+   color: rgb(202, 28, 28);
    z-index: 0;
    border: 3px solid;
    border-radius: 30px ;
@@ -94,14 +94,14 @@ align-items: center;
     transition: all 0.5s;
 }
 
-.yo{
- margin-top: 38em;
- margin-left: -5em;
- font-size: 1em;
-color: rgba(243, 243, 243, 0.473);
+.yo {
+    margin-top: 38em;
+    margin-left: -5em;
+    font-size: 1em;
+    color: rgba(243, 243, 243, 0.473);
 }
 
-.socialMedia{
+.socialMedia {
     /* width: 50%; */
 	position: absolute;
 	justify-content: flex-end;
@@ -113,13 +113,10 @@ color: rgba(243, 243, 243, 0.473);
     text-align: center;
    font-weight: 600;
    cursor: pointer;
-
-
 }
 
 .socialMedia:hover{
-
-	color: #9c0d0db0;
-    text-shadow: black;
+	color: #b61f1f;
+    text-shadow: 0px 0px 0.5px rgba(0, 0, 0, 0.432);
     cursor: pointer;
 }
