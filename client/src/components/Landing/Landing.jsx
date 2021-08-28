@@ -21,29 +21,25 @@ const Landing = () => {
                         zIndex: "-1"
                     }}
                 >
-                    <source src={Video} type="video/mp4"></source>
-                </video>
-                    <div className={styles.titulo}>
-                    <h1>Welcome to <br></br>Pokemon World</h1>
-                    <br></br>
-                        <Link to = "/home"/>
-                        <div className={styles.main}>
-                            <button className={styles.btn}>
-                                     Start
-                            </button>
-                            </div>
-                            </div>
-                    <div className={styles.yo}>
-                        <h4>Created by </h4>
+                <source src={Video} type="video/mp4"></source>
+            </video>
+                <div className={styles.titulo}>
+                    <h1>Welcome to <br/>Pokemon World</h1>
+                        <br/>
+                    <Link to = "/home"/>
+                    <div className={styles.main}>
+                        <button className={styles.btn}>
+                                 Start
+                        </button>
+            </div>
+            </div>
+                <div className={styles.yo}>
+                    <h4>Created by </h4>
                     <a href="https://www.linkedin.com/in/rocio-de-luz-jalil/"
-                 rel='noreferrer' target="_BLANK" className={styles.socialMedia}> Rocío Jalil </a>
+                     rel='noreferrer' target="_BLANK" className={styles.socialMedia}> Rocío Jalil </a>
 
-                    </div>
-                </div>
-
-            
-
-
+            </div>
+        </div>
     )
 }
 
