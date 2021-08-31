@@ -1,6 +1,6 @@
 const axios = require ('axios');
 const { Router }  = require ('express');
-const {v4: uuid } = require ('uuid');
+// const {v4: uuid } = require ('uuid');
 const { conn, Pokemon, Types } = require('../../db');
 const router = Router();
 
@@ -59,7 +59,7 @@ router.get("/", async function (req, res) {
                 types: pokeDb.Types.map((e) => e.type),
                 fuerza: pokeDb.fuerza,
                 imagen: pokeDb.imagen,
-                id: pokeDb.uuidv4()
+                id: pokeDb.id
             })
         }
 

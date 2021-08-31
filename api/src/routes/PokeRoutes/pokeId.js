@@ -27,18 +27,17 @@ router.get('/:id', async (req, res, next) => {
             .then(response => {
 
                 let pokemon = response.data
-                let estadisticas = pokemon.stats    //selección de info
-
+            
                 res.json({
                     id: pokemon.id,
                     name: pokemon.name,
                     types: pokemon.types.map((e) => e.type.name),
                     imagen: pokemon.sprites.other["official-artwork"].front_default,
 
-                    vida: estadisticas[0].base_stat,
-                    fuerza: estadisticas[1].base_stat,
-                    defensa: estadisticas[3].base_stat,
-                    velocidad: estadisticas[5].base_stat,
+                    vida: pokemon.stats[0].base_stat,
+                    fuerza: pokemon.stats[1].base_stat,
+                    defensa: pokemon.stats[3].base_stat,
+                    velocidad: pokemon.stats[5].base_stat,
 
                     altura: pokemon.height,
                     peso: pokemon.weight,
