@@ -1,7 +1,6 @@
 const axios = require ('axios');
 const { Router } = require ('express');
 const { Pokemon, Types } = require('../db');
-const { API_URL } = process.env;
 
 const router = Router();
 
@@ -23,11 +22,12 @@ router.get('/:id', async (req, res, next) => {
                     console.log( pokeDb, 'soy de base de datos');
                     return res.json(pokeDb);
         } else {
-            axios.get("https://pokeapi.co/api/v2/pokemon/" + id)
+
+            axios.get("https://pokeapi.co/api/v2/pokemon/" + id)    // viene la data de la api
             .then(response => {
 
                 let pokemon = response.data
-                let estadisticas = pokemon.stats
+                let estadisticas = pokemon.stats    //selección de info
 
                 res.json({
                     id: pokemon.id,
