@@ -4,6 +4,7 @@ const {v4: uuid } = require ('uuid');
 const { conn, Pokemon, Types } = require('../db');
 const router = Router();
 
+// [ ] GET /pokemons + GET /pokemons?name="..."
 
 let store = []
 
@@ -42,9 +43,9 @@ router.get("/", async function (req, res) {
                 }).catch(err => next(err))
          }
         //  acá es donde le digo que me muestre 9
-        res.json({ nuevePoke: store.splice(0, 9), cuantosQuedan: store.length })
+        res.json({ nuevePoke: store.splice(0, 40), cuantosQuedan: store.length })
 
-     if (q) {  // búsqueda x query. Me traigo los de mi BD si no API.
+     if (q) {  // búsqueda x query. Me traigo los de mi BD si no API ---> ver si trae exacto...
 
         let pokeDb = await Pokemon.findAll({
             where: { name: q }, include: Types
@@ -78,7 +79,7 @@ router.get("/", async function (req, res) {
                 // VER TEMA DE CATCH
                 .catch(() => res.json(
                     {
-                        name: "No encontrado",
+                        name: "Not found",
                         types: [],
                         fuerza: "",
                         id: "",

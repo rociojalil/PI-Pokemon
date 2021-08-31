@@ -9,7 +9,9 @@ module.exports = (sequelize) => {
   sequelize.define('Pokemon', { 
 
     id: {
-      type: DataTypes.UUID,
+      type: DataTypes.STRING,
+      //uuid no me funciona en busqueda x id
+
       primaryKey: true,
     },
 
