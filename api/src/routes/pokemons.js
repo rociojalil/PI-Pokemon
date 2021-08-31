@@ -37,16 +37,13 @@ router.get("/", async function (req, res) {
                             imagen: pokemon.sprites.other["official-artwork"].front_default,
                             // ver el de dream world imagen
                             fuerza: pokemon.stats[1].base_stat
-
                         })   
                     }))
-
                 }).catch(err => next(err))
          }
-        //  acá es donde finalmente le digo que me muestre 9
+        //  acá es donde le digo que me muestre 9
         res.json({ nuevePoke: store.splice(0, 9), cuantosQuedan: store.length })
 
-    
      if (q) {  // búsqueda x query. Me traigo los de mi BD si no API.
 
         let pokeDb = await Pokemon.findAll({
@@ -68,21 +65,16 @@ router.get("/", async function (req, res) {
         else { //desde la API (mismo que antes)
 
             axios.get("https://pokeapi.co/api/v2/pokemon/" + q)
-
                 .then(response => {
-
                     let pokemon = response.data
-
                     res.json({
                         name: pokemon.name,
                         types: pokemon.types.map((e) => e.type.name),
                         imagen: pokemon.sprites.other["official-artwork"].front_default,
                         fuerza: pokemon.stats[1].base_stat,
                         id: pokemon.id
-
                     })
                 })
-
                 // VER TEMA DE CATCH
                 .catch(() => res.json(
                     {
@@ -94,17 +86,8 @@ router.get("/", async function (req, res) {
                     }
                 ))
         }
-
-
     }
-
-
 })
-
-
-
-
-
 
 
 module.exports = router
