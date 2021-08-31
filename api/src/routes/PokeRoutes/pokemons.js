@@ -1,7 +1,7 @@
 const axios = require ('axios');
 const { Router }  = require ('express');
 const {v4: uuid } = require ('uuid');
-const { conn, Pokemon, Types } = require('../db');
+const { conn, Pokemon, Types } = require('../../db');
 const router = Router();
 
 // [ ] GET /pokemons + GET /pokemons?name="..."

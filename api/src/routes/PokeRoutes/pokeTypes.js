@@ -1,6 +1,6 @@
 const axios = require ('axios');
 const { Router } = require('express');
-const { Types } = require('../db');
+const { Types } = require('../../db');
 
 const router = Router();
 //  GET /types:
@@ -20,7 +20,6 @@ router.get('/', async (req, res, next) => {
         // console.log( datos, 'aca estan desde mi BD')
         res.json(datos);
         });
-
 
 
 module.exports = router

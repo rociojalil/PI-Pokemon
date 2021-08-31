@@ -1,6 +1,6 @@
 const axios = require ('axios');
 const { Router } = require ('express');
-const { Pokemon, Types } = require('../db');
+const { Pokemon, Types } = require('../../db');
 
 const router = Router();
 
