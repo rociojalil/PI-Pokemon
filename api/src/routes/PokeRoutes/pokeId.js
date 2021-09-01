@@ -46,7 +46,7 @@ router.get('/:id', async (req, res, next) => {
                 // console.log(response);
         })
     
-    .catch (error => res.json({error: 'We couldnt find that ID'})) ;
+    .catch (error => res.json({error: 'We couldnt find that PokemonID'})) ;
         }
     })
 
