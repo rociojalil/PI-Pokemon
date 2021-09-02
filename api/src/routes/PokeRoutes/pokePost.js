@@ -12,7 +12,7 @@ const router = Router();
 
 router.post("/", async function (req, res) {
     //me traigo todo x body
-    let { name, vida, fuerza, defensa, velocidad, altura, peso, tipos } = req.body;
+    let { name, vida, fuerza, defensa, velocidad, altura, peso, types } = req.body;
 // try {
   console.log(req.body);
 
@@ -52,7 +52,7 @@ router.post("/", async function (req, res) {
 // tambien podria ser un Pokemon.findAll donde le digo que where: tipos o sea el q me llega x body y ahi le hago el add
 // con un res.send('perro creado con exito!')
 
-  await pokemon.addTypes(tipos);
+  await pokemon.addTypes(types);
   res.json({ info: "Pokemon creado con éxito" });
   console.log(pokemon, 'acá están los datos del pokemon creado')
 },)

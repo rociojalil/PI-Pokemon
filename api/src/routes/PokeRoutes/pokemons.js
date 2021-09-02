@@ -1,20 +1,21 @@
 const axios = require ('axios');
 const { Router }  = require ('express');
+const { Pokemon, Types } = require('../../db');
 // const {v4: uuid } = require ('uuid');
 const router = Router();
 
 // [ ] GET /pokemons (40) + GET /pokemons?name="..." (búsqueda x query)
 // podría hacer que en el splice me traiga menos... 9
 
-let store = []
 
 router.get("/", async function (req, res) {
-
+    
     const { q } = req.query
-
+    
     // si la búsqueda no es por query --> trae los 40 de API
-        if (!q) {
-         
+    if (!q) {
+        
+            let store = []
             let array = []
             //recorro hasta 40 poke
             for (let i = 1; i <= 40; i++) {
@@ -29,18 +30,50 @@ router.get("/", async function (req, res) {
                             id: pokemon.id,
                             name: pokemon.name,
                             types: pokemon.types.map((e) => e.type.name),
+                            vida: pokemon.stats[0].base_stat,
+                            fuerza: pokemon.stats[1].base_stat,
+                            defensa: pokemon.stats[2].base_stat,
+                            velocidad: pokemon.stats[5].base_stat,
                             imagen: pokemon.sprites.other["official-artwork"].front_default,
+                            // altura: data.altura,
+                            // peso: data.peso,
                             // ver el de dream world imagen
-                            fuerza: pokemon.stats[1].base_stat
+                            
                         })   
+                        // return store;
                     }))
-                }).catch(error => json({ error: "Ups!" }))
-         
-        //  acá es donde le digo que me muestre 40
-        res.json({cuarentaPoke: store.splice(0, 40), cuantosQuedan: store.length });
-        }
+                })
+                // }).catch(error => json({ error: "algo pasó!" }))
+                
+                //  acá es donde le digo que me muestre 40
+            
+                res.json({cuarentaPoke: store.splice(0, 40), cuantosQuedan: store.length });
+            }
 
-        else if (q) {  //búsqueda x query exacta --> trae info desde api
+    else if (q) {  //búsqueda x query exacta --> trae info desde api o pókemon creado desde BD
+
+            const db = await Pokemon.findOne({
+                where: {
+                  name: q,
+                },
+                include: Types,
+              });
+              if (db) {
+                const pokemonDb = [
+                  {
+                    name: db.name,
+                    types: db.Types.map((e) => e.types),
+                    fuerza: db.fuerza,
+                    defensa: db.defensa,
+                    fuerza: db.fuerza,
+                    altura: db.altura,
+                    peso: db.peso,
+                    id: db.id
+                  },
+                ];
+                res.json(pokemonDb);
+                
+            } else { 
 
             axios.get("https://pokeapi.co/api/v2/pokemon/" + q)
                 .then(response => {
@@ -56,6 +89,7 @@ router.get("/", async function (req, res) {
 
                     })
                 })
+    
 
                 .catch(() => res.json(
                     {
@@ -64,8 +98,9 @@ router.get("/", async function (req, res) {
                         // imagen default de no encontrar poke x query ---> ver desp en front
                     }
                 ))
-    }
-})
+            }
+        
+    }})
 
 
 module.exports = router
