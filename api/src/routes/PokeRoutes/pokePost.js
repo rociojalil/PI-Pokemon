@@ -9,11 +9,6 @@ const router = Router();
 // Recibe los datos recolectados desde el formulario controlado de la ruta de creación de pokemons por body
 // Crea un pokemon en la base de datos
 
-// primero me traigo todo por req.body
-	// despues creo mi dog en mi bd pero el temperament a parte lo agrego con ADD o SET (metodos del belongTomany)
-	// tambien podria ser un temperament.findAll donde le digo que where: temperament o sea el q me llega x body y ahi le hago el add
-	// con un res.send('perro creado con exito!')
-
 
 router.post("/", async function (req, res) {
     //me traigo todo x body
@@ -34,8 +29,13 @@ router.post("/", async function (req, res) {
 
         if (!name) return res.json({ error: "El nombre es obligatorio" });
 
-        const existe = await Pokemon.findOne({ where: { name: name } });
-        if (existe) return res.json({ info: "El pokemon ya existe" });
+        const existe = await Pokemon.findOne({ 
+            where: { 
+                name: name 
+                    } 
+        });
+
+        if (existe) return res.json({ warning: "El pokemon ya existe" });
 
 // creación del pokemon
   const pokemon = await Pokemon.create({
@@ -49,8 +49,11 @@ router.post("/", async function (req, res) {
   });
 
 //  add - set : metodos de belongToMany donde agrego mi otro modelo Types
+// tambien podria ser un Pokemon.findAll donde le digo que where: tipos o sea el q me llega x body y ahi le hago el add
+// con un res.send('perro creado con exito!')
+
   await pokemon.addTypes(tipos);
-  res.json({ info: "Pokemon creado" });
+  res.json({ info: "Pokemon creado con éxito" });
   console.log(pokemon, 'acá están los datos del pokemon creado')
 },)
 
@@ -59,12 +62,6 @@ router.post("/", async function (req, res) {
 //         error: "No pudimos crearlo",
 //     }, next(err))
 //   }})
-
-
-
-
-
-
 
 
 module.exports = router
