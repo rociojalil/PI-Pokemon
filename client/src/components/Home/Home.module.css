@@ -1,0 +1,70 @@
+/* *{
+    margin: 0;
+    padding: 0;
+} */
+.navBar {
+    display: grid;
+    grid-template-areas: "logo home nav create space again weno weno weno weno";
+    /* background-color: #ff9100; */
+    /* border-bottom: 4px solid #ff9100; */
+    padding: 18px;
+    /* background-color:  rgba(0, 0, 0, 0.397); */
+}
+
+
+.dogApp {
+    grid-area: logo;
+    display: flex;
+    font-family: Georgia, serif;
+}
+
+.dogApp i{
+    color: #000000;
+    text-shadow: 2px 2px 1px #000000;
+    margin-top: 10px;
+    
+}
+
+.dogApp p {
+    font-size: 38px;
+    font-weight: bold;
+    justify-content: flex-start;
+     color: #ffffff;
+    text-shadow: 2px 2px #000000; 
+    color: #ffffff;
+}
+
+.navigation {
+    grid-area: home;
+    display: flex;
+    justify-content: space-evenly;
+    font-family: "Segoe UI";
+} 
+
+
+
+.navigation li {
+    margin: auto;
+    list-style: none;
+    /* border-bottom:3px solid #000000 ; */
+    padding: 3px;
+    
+}
+
+.navigation li a {
+    text-align: center;
+    font-size: 33px;
+    text-decoration: none;
+    letter-spacing: 0.1rem;
+    margin: auto;
+    color: #ffffff;
+    /* font-weight: bold; */
+    transition: color, text-shadow 250ms;
+    transition: all 0.4s;
+} 
+
+.navigation li a:hover {
+    color: #000000;
+    text-shadow: -1px -1px 10px rgb(77, 77, 77), 1px 1px 10px rgb(87, 87, 87);
+    cursor: pointer;
+} 
