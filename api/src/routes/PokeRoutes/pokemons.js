@@ -35,9 +35,10 @@ router.get("/", async function (req, res) {
                             defensa: pokemon.stats[2].base_stat,
                             velocidad: pokemon.stats[5].base_stat,
                             imagen: pokemon.sprites.other["official-artwork"].front_default,
-                            // altura: data.altura,
-                            // peso: data.peso,
+                            altura: pokemon.altura,
+                            peso: pokemon.peso,
                             // ver el de dream world imagen
+                            // ver si traer todos o menos en front
                             
                         })   
                         // return store;
@@ -45,7 +46,7 @@ router.get("/", async function (req, res) {
                 })
                 // }).catch(error => json({ error: "algo pasó!" }))
                 
-                //  acá es donde le digo que me muestre 40
+                //  acá es donde le digo que me mande 40 (splice)
             
                 res.json({cuarentaPoke: store.splice(0, 40), cuantosQuedan: store.length });
             }
@@ -89,7 +90,6 @@ router.get("/", async function (req, res) {
 
                     })
                 })
-    
 
                 .catch(() => res.json(
                     {

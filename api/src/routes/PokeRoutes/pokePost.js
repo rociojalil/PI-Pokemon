@@ -50,7 +50,7 @@ router.post("/", async function (req, res) {
 
 //  add - set : metodos de belongToMany donde agrego mi otro modelo Types
 // tambien podria ser un Pokemon.findAll donde le digo que where: tipos o sea el q me llega x body y ahi le hago el add
-// con un res.send('perro creado con exito!')
+// con un res.send('perro creado con exito!') ---> ver desp en front si me trae bien types
 
   await pokemon.addTypes(types);
   res.json({ info: "Pokemon creado con éxito" });
