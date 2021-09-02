@@ -13,7 +13,8 @@ module.exports = (sequelize) => {
       defaultValue: DataTypes.UUIDV4,
       primaryKey: true,
     },
-    idPoke: {
+    // otro id simplemente para visualizar mejor en la BD x numero ya que UUID es una combinación larga
+    idPokeCreado: {
       type: DataTypes.INTEGER,
       autoIncrement: true,
     },
