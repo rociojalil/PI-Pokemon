@@ -9,10 +9,13 @@ module.exports = (sequelize) => {
   sequelize.define('Pokemon', { 
 
     id: {
-      type: DataTypes.STRING,
-      //uuid no me funciona en busqueda x id
-
+      type: DataTypes.UUID,
+      defaultValue: DataTypes.UUIDV4,
       primaryKey: true,
+    },
+    idPoke: {
+      type: DataTypes.INTEGER,
+      autoIncrement: true,
     },
 
     name: {
