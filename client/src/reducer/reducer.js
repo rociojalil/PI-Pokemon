@@ -3,6 +3,7 @@
 //     filter: [],
 //     POKEMONDetail: {},
 //     tYPES: [],
+// ver en que estado guardo cada cosa
 
 // }
 

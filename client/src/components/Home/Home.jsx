@@ -7,6 +7,7 @@ import styles from './Home.module.css'
 
 
 function Home() {
+    // meter los componentes
     
     return (
         
