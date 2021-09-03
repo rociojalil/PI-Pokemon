@@ -9,9 +9,11 @@ import styles from './Home.module.css'
 function Home() {
     
     return (
-
+        
         <div className={styles.main}>
-            <div>
+            <h1>HOLAAAAA</h1>
+            </div>
+            /* <div>
                 <Nav />
             </div>
             <br />
@@ -33,7 +35,8 @@ function Home() {
             <br />
             <br />
             <Footer/>
-        </div>
+        </div> */
+            
 
 
     )
