@@ -1,12 +1,13 @@
 import React from 'react'
 import styles from './Nav.module.css'
+import logo from './img/logo.png';
 // import Buscador from './Buscador'
 
 function Nav() {
     return (
         <div className={styles.navBar}>
             <div className={styles.dogApp}>
-                <p>Dogs App</p>
+                <img src={logo} alt="logo" />
                 {/* <i class="fas fa-paw"></i> */}
             </div >
             <ol className={styles.navigation}>

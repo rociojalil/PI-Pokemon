@@ -12,9 +12,7 @@ function Home() {
     return (
         
         <div className={styles.main}>
-            <h1>HOLAAAAA PI POKEMON</h1>
-            </div>
-            /* <div>
+            <div>
                 <Nav />
             </div>
             <br />
@@ -25,8 +23,8 @@ function Home() {
             <br />
             <br />
             <br />
-            <div>
-                <Filters />
+            {/* <div>
+                 <Filters />
             </div>
             <div>
                 <PokeCards />
@@ -35,10 +33,9 @@ function Home() {
             <br />
             <br />
             <br />
-            <Footer/>
-        </div> */
-            
-
+            <Footer/>  */}
+        </div> 
+    
 
     )
 }

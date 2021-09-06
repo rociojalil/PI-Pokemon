@@ -25,7 +25,7 @@ const Landing = () => {
             </video>
 
                 <div className={styles.titulo}>
-                    <h1>Welcome to <br/>Pokemon World</h1>
+                    <h1> Welcome to <br/>Pokemon World</h1>
                         <br/>
                         
                 <div className={styles.main}>

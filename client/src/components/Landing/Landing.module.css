@@ -54,6 +54,7 @@ align-items: center;
 
 .btn {
    /* top: -80%; */
+   margin-left: 4em;
    width: 200px;
    height: 60px;
    font-size: 1.5rem;
@@ -95,8 +96,8 @@ align-items: center;
 }
 
 .yo {
-    margin-top: 38em;
-    margin-left: -5em;
+    margin-top: 30em;
+    margin-left: 41em;
     font-size: 1em;
     color: rgba(243, 243, 243, 0.473);
 }
@@ -107,8 +108,8 @@ align-items: center;
 	justify-content: flex-end;
     /* color: white; */
     color: rgba(243, 243, 243, 0.473);
-    left: 49%;
-    top: 80.6%;
+    left: 47%;
+    top: 63.6%;
     margin-left: 20px;
     text-align: center;
    font-weight: 600;
