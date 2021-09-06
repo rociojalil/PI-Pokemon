@@ -12,7 +12,7 @@ function Home() {
     return (
         
         <div className={styles.main}>
-            <h1>HOLAAAAA</h1>
+            <h1>HOLAAAAA PI POKEMON</h1>
             </div>
             /* <div>
                 <Nav />
