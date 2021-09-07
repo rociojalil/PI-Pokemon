@@ -1,8 +1,7 @@
 import React from 'react'
 import styles from './Nav.module.css'
 import logo from './img/logo.png';
-import pikachu from './img/pikachu.png'
-// import Buscador from './Buscador'
+import Buscador from './Buscador'
 
 function Nav() {
     return (
@@ -17,7 +16,7 @@ function Nav() {
                 <li><a href="/createPoke">Create a Pokémon!</a></li>
             </ol>
             <div>
-                {/* <Buscador /> */}
+                <Buscador />
             </div>
         </div>
     )

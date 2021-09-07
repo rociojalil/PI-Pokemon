@@ -1,0 +1,100 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.searchBox {
+    position: absolute;
+    top: 6%;
+    left: 75%;
+    transform: translate(-50%,-50%);
+    width: 500px;
+}
+.input{
+    position: relative;
+    display: inline-block;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.input[type="text"] {
+    background: #fff;
+    width: 300px;
+    height: 40px;
+    border: none;
+    outline: none;
+    padding: 0 25px;
+    border-radius: 25px 0 0 25px;
+}
+.input[type="submit"] {
+    position: relative;
+    border-radius: 0 25px 25px 0;
+    left: -5px;
+    width: 150px;
+    height: 40px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background: rgb(77, 77, 77);
+    color: rgb(255, 255, 255);
+}
+.input[type="submit"]:hover {
+    color: black;
+    background: rgb(255, 238, 2);
+    opacity: 1;
+    cursor: pointer;
+}
+
+
+/* este era una searchbar interactiva que se movia para el costado al posicionar el mourse para escribir
+ pero en el component donde escribo html no me toma el icono de buscador y no queda bien sin eso */
+/* 
+.searchBox {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 80px;
+    height: 50px;
+    overflow: hidden;
+    transition: all 1s;
+   
+}
+
+.searchBox input {
+   position: absolute;
+   width: 80%;
+   height: 100%;
+   outline: none;
+   border: none;
+   background: #252525;
+   color: white;
+   font-size: 1.5rem;
+   padding: 0 10px;
+   opacity: 0;
+   transition: all 1s;
+}
+
+.searchBox:hover{
+    width: 400px;
+}
+.searchBox:hover input{
+    opacity: 1;
+}
+.searchBox .icon{
+    position: absolute;
+    right: 0;
+    width: 80px;
+    height: 100%;
+    background:#6930c3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    cursor: pointer;
+    transition: all .4s;
+}
+.searchBox .icon:hover{
+    background: #8256c9
+} */
