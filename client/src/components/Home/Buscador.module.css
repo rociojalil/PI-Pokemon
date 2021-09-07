@@ -7,7 +7,7 @@
 .searchBox {
     position: absolute;
     top: 6%;
-    left: 75%;
+    left: 76%;
     transform: translate(-50%,-50%);
     width: 500px;
 }
@@ -19,8 +19,9 @@
 }
 
 .input[type="text"] {
-    background: #fff;
-    width: 300px;
+    background: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    width: 280px;
     height: 40px;
     border: none;
     outline: none;
@@ -31,13 +32,13 @@
     position: relative;
     border-radius: 0 25px 25px 0;
     left: -5px;
-    width: 150px;
+    width: 140px;
     height: 40px;
     border: none;
     outline: none;
     cursor: pointer;
-    background: rgb(77, 77, 77);
-    color: rgb(255, 255, 255);
+    background: rgb(44, 44, 44);
+    color: rgb(255, 238, 0);
 }
 .input[type="submit"]:hover {
     color: black;
