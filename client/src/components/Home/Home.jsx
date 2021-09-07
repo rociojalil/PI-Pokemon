@@ -23,10 +23,10 @@ function Home() {
             <br />
             <br />
             <br />
-            {/* <div> */}
-                 {/* <Filters />
-            </div>
-            <div>
+            {/* <div> 
+                <Filters />
+            </div> */}
+            {/* <div>
                 <PokeCards />
             </div> */}
             <br />
