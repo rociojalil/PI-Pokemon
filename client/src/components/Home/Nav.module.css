@@ -4,15 +4,17 @@
 } */
 .navBar {
     display: grid;
+   background-color: rgba(0, 0, 0, 0.589);
     grid-template-areas: "logo home nav create space again weno weno weno weno";
-    /* background-color: #ff9100; */
-    /* border-bottom: 4px solid #ff9100; */
-    padding: 18px;
-    /* background-color:  rgba(0, 0, 0, 0.397); */
+    /*background-color: #ff9100;
+    *//*border-bottom: 4px solid #ff9100;
+    */padding: 2px;
+   
 }
+   
 
 
-.dogApp {
+.logoApp {
     width: 80px;
     height: 80px;
     grid-area: logo;
@@ -51,7 +53,7 @@
 } 
 
 .navigation li a:hover {
-    color: #000000;
-    text-shadow: -1px -1px 10px rgb(77, 77, 77), 1px 1px 10px rgb(87, 87, 87);
+    color: #ffee00;
+    text-shadow: -1px -1px 20px rgb(88, 88, 88), 1px 1px 20px rgb(117, 117, 117);
     cursor: pointer;
 } 
