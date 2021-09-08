@@ -117,9 +117,9 @@ function CreateBreed(props) {
 
     // mensajitos de alerta con respecto a cuantos seleccionar + setInput para pasar muchos
     function handleSelect(e) {
-        if (input.temperament.includes(parseInt(e.target.value))) {
+        if (input.types.includes(parseInt(e.target.value))) {
             alert('You already selected this type. Try again.')
-        } else if (input.temperament.length >= 3) {
+        } else if (input.types.length >= 3) {
             alert('You can select up to 3 types.')
         } else {
             // traeme lo que ya habia y concatenale el target value donde va a meter en un [] todo lo que yo agregue
@@ -292,7 +292,7 @@ function CreateBreed(props) {
                                 </option>
                                 {/* .id .name? */}
                                 {temperaments?.map((e) => (
-                                    <option value={e.id} >{e.name}</option>)
+                                    <option value={e.id} key={e.id} >{e.name}</option>)
                                 )}
                             </select>
                         </div>
@@ -309,7 +309,7 @@ function CreateBreed(props) {
                         <br />
                         <br />
                         <button type='submit' className={styles.btnSubmit}>
-                            Create Pókemon
+                            Create Pokémon
                         </button>
                     </div>
                 </form>
