@@ -1,3 +1,65 @@
+// import React, {  useState, useEffect} from "react"; //esto
+// import Card from './Card';
+// import { useSelector, useDispatch } from 'react-redux';
+
+// import { getPokemons } from "../../actions/actions";
+
+
+// function PokeCards() {
+//     const dispatch = useDispatch();
+//     const allPokemons = useSelector((e) => e.pokemons);
+//     //
+//     useEffect(() => {
+//       dispatch(getPokemons());
+//     },[dispatch])
+    
+//    allPokemons.map((e) => {
+//     const { name, types, imagen, fuerza, id, idPokeCreado } = e;
+//     return (
+//       <div>
+//         <Card
+//           key={id}
+//           name={name}
+//           types={types}
+//           imagen={imagen}
+//           fuerza={fuerza}
+//           id={id}
+//           idPokeCreado={idPokeCreado}
+//           /> 
+          
+          
+//           </div>
+   
+      
+//     );
+//   });
+// }
+
+
+  
+//   export default PokeCards
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // import styles from './pokecards.module.css'
 // import LazyLoad from 'react-lazyload'
 // import React from 'react';

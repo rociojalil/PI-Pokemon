@@ -1,16 +1,36 @@
-// const initialState = {
-//     pokemons: [],
-//     filter: [],
-//     POKEMONDetail: {},
-//     tYPES: [],
-// ver en que estado guardo cada cosa
 
-// }
-
-// const reducer = (state = initialState, action) => {
- 
-// }
+const initialState = {
+    pokemons: [],
+    filter: [],
+    breedsDetail: {},
+    temps: [],
+  
 
 
+}
 
-// export default reducer
+
+const reducer = (state = initialState, action) => {
+    switch (action.type) {
+        case 'GET_POKEMONS':
+            return {
+                ...state,
+                pokemons: action.payload
+            }
+            case 'POST':
+            return {
+                ...state
+            }
+            case 'GET_TYPES':
+                return {
+                    ...state,
+                    temps: action.payload
+                }
+            default:
+                return {
+                    state
+                }
+        }
+    }
+    
+    export default reducer
