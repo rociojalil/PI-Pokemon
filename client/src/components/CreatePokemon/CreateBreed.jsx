@@ -150,12 +150,12 @@ function CreateBreed(props) {
             // traeme lo que ya habia y concatenale el target value donde va a meter en un [] todo lo que yo agregue
             setInput((prev) => ({
                  ...prev, 
-                 temperament: [...prev.temperament, parseInt(e.target.value)] }))
+                 types: [...prev.types, parseInt(e.target.value)] }))
         }
     }
 
     function deleteTemp(e, t) {
-        setInput((prev) => ({ ...prev, temperament: prev.temperament.filter(temp => temp !== parseInt(t)) }))
+        setInput((prev) => ({ ...prev, types: prev.types.filter(temp => temp !== parseInt(t)) }))
     }
 
 
