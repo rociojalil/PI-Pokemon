@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import { postPokemon, getTypes } from '../../actions/actions';
 // import axios from 'axios';
-import styles from './CreateBreed.module.css'
+import styles from './CreatePokemon.module.css'
 import Nav from '../Home/Nav'
 import Footer from '../Home/Footer'
 import { useHistory} from 'react-router-dom';
@@ -69,7 +69,7 @@ function validateForm(input) {
 };
 
 
-function CreateBreed(props) {
+function CreatePokemon(props) {
 
     const dispatch = useDispatch();
     // me traigo los temperamentos del estado temps
@@ -340,10 +340,10 @@ function CreateBreed(props) {
                                 ))
                             }
                         </div>
-                        <br />
+                    
                         <br />
                         <button type='submit' className={styles.btnSubmit}>
-                            Create Pokémon
+                            Create!
                         </button>
                     </div>
                 </form>
@@ -353,5 +353,5 @@ function CreateBreed(props) {
     )
 }
 
-export default CreateBreed
+export default CreatePokemon
 

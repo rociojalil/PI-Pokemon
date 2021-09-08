@@ -9,11 +9,11 @@
     background-color: #000000a4;
     border-radius: 20px;
     margin: auto;
-    width: 75vh;
+    width: 70vh;
     height: fit-content;
-    padding: 30px;
+    padding: 20px;
     margin-bottom: 100px;
-    margin-top: -20px;
+    margin-top: -50px;
 }
 
 .title{
@@ -37,7 +37,7 @@
 
 .cards input {
     display: flex;
-    width: 70%;
+    width: 65%;
     margin: auto;
     text-align: center;
     background-color: transparent;
@@ -47,6 +47,13 @@
     border: 2px solid #ffffff;
     border-radius: 8px;
 }
+
+.cards input:hover {
+   
+    border: 2px solid #e4b211;
+    
+}
+
 
 .cards input::placeholder {
     color: rgb(167, 167, 167);
@@ -68,6 +75,11 @@
     border: 2px solid #ffffff;
     border-radius: 5px;
     text-shadow: -1px 2px #000000;
+}
+
+.dropdown:hover{
+    border: 2px solid #e4b211;
+
 }
 
 .dropdown option {
@@ -116,16 +128,16 @@
     display: flex;
     margin: auto;
     justify-content: center;
-    background-color: transparent;
+    background-color: rgba(0, 0, 0, 0.39);
     color: #e4b211;
     text-shadow: 2px 2px 2px #000000;
-    font-size: 30px;
+    font-size: 28px;
     text-align: center;
     font-weight: bold;
     border: none;
-    border-radius: 5px;
+    border-radius: 20px;
     padding: 10px;
-    border: 1px solid #000000;
+    border: 1px solid #ffffff;
     cursor: pointer;
 }
 
@@ -133,7 +145,7 @@
     color: #ffe389;
     text-shadow: 2px 2px 2px #000000;
     background-color: transparent;
-    border: 1px solid #ff9100;
+    border: 2px solid #ff9100;
 }
 
 .errorMsg {
