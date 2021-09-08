@@ -4,12 +4,12 @@ module.exports = (sequelize) => {
     sequelize.define('Types', { 
         // saco el id porq choca con los creados
         
-        id: {
-            type: DataTypes.INTEGER,
-            unique: true,
-            primaryKey: true,
-            autoIncrement: true,
-        },
+        // id: {
+        //     type: DataTypes.INTEGER,
+        //     unique: true,
+        //     primaryKey: true,
+        //     autoIncrement: true,
+        // },
         name: {
             type: DataTypes.STRING,
             unique: true,

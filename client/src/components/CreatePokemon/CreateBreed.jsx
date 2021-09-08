@@ -16,17 +16,42 @@ function validateForm(input) {
         errors.name = "";
     }
     if (!input.defensa) {
-        errors.defensa = "Type a valid weight range";
-    } else if (!/\d{1,2} - \d{1,2}/g.test(input.weight)) {
+        errors.defensa = "Type a valid defense range";
+    } else if (!/\d{1,2} - \d{1,2}/g.test(input.defensa)) {
         errors.defensa =
             "Defense must have min-max values. Example: '10-100'";
     } else {
         errors.defensa = "";
     }
+    if (!input.velocidad) {
+        errors.velocidad = "Type a valid speed range";
+    } else if (!/\d{1,2} - \d{1,2}/g.test(input.velocidad)) {
+        errors.velocidad =
+            "Speed must have min-max values. Example: '10-100'";
+    } else {
+        errors.velocidad = "";
+    }
+    if (!input.altura) {
+        errors.altura = "Type a valid height range";
+    } else if (!/\d{1,2} - \d{1,2}/g.test(input.altura)) {
+        errors.altura =
+            "Height must have min-max values. Example: '10-100'";
+    } else {
+        errors.altura = "";
+    }
+    if (!input.peso) {
+        errors.peso = "Type a valid weight range";
+    } else if (!/\d{1,2} - \d{1,2}/g.test(input.peso)) {
+        errors.peso =
+            "Weight must have min-max values. Example: '10-100'";
+    } else {
+        errors.peso = "";
+    }
+    
 
     if (!input.fuerza) {
         errors.fuerza = "Type a valid strength range";
-    } else if (!/\d{1,2}-\d{1,2}/g.test(input.height)) {
+    } else if (!/\d{1,2}-\d{1,2}/g.test(input.fuerza)) {
         errors.fuerza=
             "Strength must have min-max values. Example: '10-100'";
     } else {
@@ -34,7 +59,7 @@ function validateForm(input) {
     }
     if (!input.vida) {
         errors.vida = "Type a valid life span";
-    } else if (!/\d{1,2}-\d{1,2}/g.test(input.life_span)) {
+    } else if (!/\d{1,2}-\d{1,2}/g.test(input.vida)) {
         errors.vida =
             "Life span must have min-max values. Example: '1-100'";
     } else {
@@ -249,6 +274,9 @@ function CreateBreed(props) {
                                 value={input.velocidad}
 
                             ></input>
+                            {errors.velocidad && touched.velocidad && (
+                                <p className={styles.errorMsg}>{errors.velocidad}</p>
+                            )}
                         </div>
 
                         <br />
@@ -264,6 +292,9 @@ function CreateBreed(props) {
                                 value={input.altura}
 
                             ></input>
+                            {errors.altura && touched.altura && (
+                                <p className={styles.errorMsg}>{errors.altura}</p>
+                            )}
                         </div>
 
                         <br />
@@ -279,6 +310,9 @@ function CreateBreed(props) {
                                 value={input.peso}
 
                             ></input>
+                            {errors.peso && touched.peso && (
+                                <p className={styles.errorMsg}>{errors.peso}</p>
+                            )}
                         </div>
 
                         <br />
