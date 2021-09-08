@@ -6,6 +6,7 @@ import { postPokemon, getTypes } from '../../actions/actions';
 import styles from './CreatePokemon.module.css'
 import Nav from '../Home/Nav'
 import Footer from '../Home/Footer'
+import pokeimage from '../Home/img/pikachu.png'
 import { useHistory} from 'react-router-dom';
 
 function validateForm(input) {
@@ -344,6 +345,13 @@ function CreatePokemon(props) {
                         <br />
                         <button type='submit' className={styles.btnSubmit}>
                             Create!
+                            <img src={pokeimage} alt="logo" 
+                            style={{
+                            position: "relative",
+                            width: "35px",
+                            
+                            left: "3%",
+                    }}/>
                         </button>
                     </div>
                 </form>
