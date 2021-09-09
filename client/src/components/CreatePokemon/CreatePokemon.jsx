@@ -128,6 +128,7 @@ function CreatePokemon(props) {
         dispatch(postPokemon(input)) 
         alert("Your Pokémon has been created successfully!")
         setInput({
+            idPokeCreado: '',
             name: '',
             vida: '',
             fuerza: '',

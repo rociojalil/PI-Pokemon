@@ -13,7 +13,6 @@ function PokeDetail({ match }) {
 
 
     const { id } = match.params
-    console.log("12", id)
 
 
     const dispatch = useDispatch()
@@ -27,7 +26,6 @@ function PokeDetail({ match }) {
     const pokemon = useSelector(state => state.detail)
 
 
-    if (typeof pokemon?.id === 'string') {
         return (
             <div className={styles.main}>
                 <div>
@@ -40,59 +38,7 @@ function PokeDetail({ match }) {
                 <LazyLoad>
                 <div className={styles.dogDetail}>
                     <br />
-                    <p className={styles.dogName}><br />{pokemon?.name}</p>
-    
-                    <br />
-                   
-
-                    <img className={styles.dogImage}src={pokemon?.imagen}/>
-                                        
-                                                 
-
-                    <br />
-                    
-
-                    <p className={styles.dogTemp}>Types:</p>
-            
-                    {pokemon?.types.map(t=> {
-                        return (
-                            <p className={styles.tempBD}>{t.name}</p>
-                        )
-                    })}
-
-                    <br />
-
-                    <p className={styles.dogWeight}>Vida: <br /> {pokemon?.vida} Kg.</p>
-    
-                    <br />
-    
-                    <p className={styles.dogHeight}>Fuerza: <br />{pokemon?.fuerza} cm.</p>
-    
-                    <br />
-    
-                    <p className={styles.dogLife}>Defensa <br /> {pokemon?.defensa}</p>
-    
-                </div>
-                </LazyLoad>
-                <Footer/>
-            </div>
-    
-        )
-    } else {
-
-        return (
-            <div className={styles.main}>
-                <div>
-                    <Nav />
-                </div>
-                <br />
-                <br />
-                <br />
-    
-                <LazyLoad>
-                <div className={styles.dogDetail}>
-                    <br />
-                    <p className={styles.dogName}><br />{pokemon?.name}</p>
+                    <p className={styles.dogName}><br />{pokemon?.name.toUpperCase()}</p>
     
                     <br />
                     <br />
@@ -101,8 +47,19 @@ function PokeDetail({ match }) {
     
                     <br />
                     <br />
-    
-                    <p className={styles.dogTemp}>Types: <br /> {pokemon?.temperament}</p>
+                    <p className={styles.dogTemp}>Types:</p>
+                    <p className={styles.tempBD}>
+                    
+                    {pokemon?.types.map((t) => t[0].toUpperCase() + t.slice(1))
+                    .join(' - ')}
+                    
+                    </p>
+
+                    {/* <p><br />{pokemon?.types}</p> */}
+                    {/* {pokemon?.types.map((e) => (
+                                   <p value={e.id} key={e.id} >{e.name}</p>)
+                                )} */}
+        
     
                     <br />
     
@@ -125,7 +82,7 @@ function PokeDetail({ match }) {
     }
 
     
-}
+
 
 export default PokeDetail;
 

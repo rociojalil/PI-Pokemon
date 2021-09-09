@@ -54,7 +54,7 @@ router.post("/", async function (req, res) {
 
   await pokemon.addTypes(types);
   res.json({ info: "Pokemon creado con éxito" });
-  console.log(pokemon, 'acá están los datos del pokemon creado')
+  // console.log(pokemon, 'acá están los datos del pokemon creado')
 },)
 
 //   catch{(err) =>  res.json(
