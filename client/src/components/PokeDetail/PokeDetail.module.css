@@ -1,0 +1,76 @@
+
+
+.main {
+  background-image: url(../Home/img/altopika.jpg);
+  background-size:cover;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  height: 100%;
+  background-size: 100%;
+  margin-top: -20px;
+  
+  
+  
+}
+
+.dogDetail {
+  position: relative;
+  top: 50%;
+  width: fit-content;
+  height: fit-content;
+  background-color: #00000031;
+  /* border: 3px solid #000000; */
+  margin: auto;
+  padding: 20px;
+  border-radius: 20px;
+  margin-bottom: 50px;
+}
+
+
+.dogName {
+  display: flex;
+  width: fit-content;
+  height: fit-content;
+  text-align: center;
+  line-height: 0px;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  text-shadow: 3px 2.5px 2px #000000;
+  font-size: 40px;
+  font-weight: bold;
+  font-family: sans-serif;
+}
+
+.dogTemp {
+  font-family: sans-serif;
+  text-align: center;
+  color: #2c2c2c;
+  /* text-shadow: 2px 2px 1px #000000; */
+  font-size: 25px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  word-wrap: break-word;
+}
+
+
+
+.tempBD {
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+  color: #ffffff;
+  text-shadow: 2px 2px 1px #000000;
+}
+
+.img{
+  display: flex;
+  width: fit-content;
+  height: fit-content;
+  height: 400px;
+  width: auto;
+  border-radius: 25px;
+  border: 2px solid #ffffff;
+  margin: auto;
+}

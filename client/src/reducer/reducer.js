@@ -2,7 +2,7 @@
 const initialState = {
     pokemons: [],
     filter: [],
-    breedsDetail: {},
+    detail: {},
     temps: [],
   
 
@@ -31,6 +31,11 @@ const reducer = (state = initialState, action) => {
                 ...state,
                 pokemons: action.payload
             }
+            case 'GET_ID':
+                return {
+                    ...state,
+                    detail: action.payload
+                }
             case 'FILTER':
                 return {
                     ...state,

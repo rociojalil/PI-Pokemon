@@ -49,6 +49,34 @@ export function getId(id) {
     }
 };
 
+// export function getById(id) {
+//     return function (dispatch) {
+//         return axios.get(`http://localhost:3001/pokeId` + id)
+//             .then(poke => {
+//                 dispatch({
+//                     type: 'GET_ID',
+//                     payload: poke.data
+//                 })
+//             })
+//     }
+
+// };
+
+export function getById(id) {
+    return async function(dispatch) {
+        try {
+            const res = await axios.get(`http://localhost:3001/pokeId/${id}`);
+            return dispatch({
+                type: 'GET_ID',
+                payload: res.data
+            });
+        } catch (err) {
+            console.log(err)
+        };
+    };
+};
+
+
 export function filter(array) {
     return {
         type: 'FILTER',

@@ -128,12 +128,12 @@ function PokeCards() {
                                     <div className={styles.cardContainer}>
                                         <div className={styles.cardName}>{d.name}</div>
                                         {/* <div className={styles.cardName}>{d.imagen}</div> */}
-                                        <img className={`${styles.cardName}${styles.imgpoke}`}src={d.imagen}
+                                        <img className={styles.cardName}src={d.imagen}
                                         style={{ objectFit: "contain", borderRadius: "1rem"}}
                                                  />
 
                                             <div className={styles.detail}>
-                                                <Link  to={`/pokeid/${d.id}`} style={{ color: "black", textDecoration: "none" }}>
+                                                <Link  to={`/pokeId/${d.id}`} style={{ color: "black", textDecoration: "none" }}>
                                                 <p>
                                                     Detail
                                                 </p>
