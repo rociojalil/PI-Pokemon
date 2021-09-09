@@ -10,7 +10,7 @@ module.exports = (sequelize) => {
             primaryKey: true,
             autoIncrement: true,
         },
-        types: {
+        name: {
             type: DataTypes.STRING,
             
         }

@@ -110,7 +110,7 @@ function PokeCards() {
             return (
                 <div className={styles.cardError}>
 
-                    <p className={styles.msgError}>We could not find the breed </p>
+                    <p className={styles.msgError}>We could not find the pokémon </p>
                     <br />
                     <img alt="Not Found" height="400px" width="350px" />
                 </div>
@@ -126,25 +126,31 @@ function PokeCards() {
                                     <br />
                                     <div className={styles.cardContainer}>
                                         <div className={styles.cardName}>{d.name}</div>
+                                        {/* <div className={styles.cardName}>{d.imagen}</div> */}
+                                        <img
+                                            src={d.imagen}
+                                                //  height="74%"
+                                                style={{ objectFit: "contain", borderRadius: "1rem", marginTop: "2vh" }}
+                                                 />
                                         
 
-                                        {d.id.length ?
+                                        {/* {d.id.length ?
                                             
                                             <LazyLoad><img src='https://phantom-marca.unidadeditorial.es/252acdd64f48851f815c16049a789f23/resize/1320/f/jpg/assets/multimedia/imagenes/2021/04/19/16188479459744.jpg' /></LazyLoad>
 
                                             :
 
                                             (d.id === 15 || d.id === 125 || d.id === 212) ?
-                                                <img src={'https://cdn2.thedogapi.com/images/' + d.reference_image_id + '.png'} alt="Not Found" />
+                                                <img  alt="Not Found" />
                                                 :
-                                                <img src={'https://cdn2.thedogapi.com/images/' + d.reference_image_id + '.jpg'} alt="Not Found" />
+                                                <img alt="Not Found" />
 
 
 
-                                        }
+                                        } */}
 
                                             <div className={styles.detail}>
-                                                <Link  to={`/dogs/${d.id}`} style={{ color: "black", textDecoration: "none" }}>
+                                                <Link  to={`/pokeid/${d.id}`} style={{ color: "black", textDecoration: "none" }}>
                                                 <p>
                                                     Detail
                                                 </p>
@@ -164,7 +170,7 @@ function PokeCards() {
                 })
 
             ) : <div > 
-                <p className={styles.doggy}>No Pókemon</p>
+                <p className={styles.doggy}>No Pokémon</p>
                 <iframe src="https://giphy.com/embed/L95W4wv8nnb9K" width="480" height="273" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/L95W4wv8nnb9K">via GIPHY</a></p>
         
               
