@@ -1,7 +1,7 @@
 
 
 .main {
-  background-image: url(../Home/img/altopika.jpg);
+  background-image: url(../Home/img/fondo.jpg);
   background-size:cover;
   background-repeat: no-repeat;
   min-height: 100vh;
@@ -13,9 +13,14 @@
   
 }
 
+.dogImage{
+  width: 30em;
+}
+
+
 .dogDetail {
   position: relative;
-  top: 50%;
+  top: 20%;
   width: fit-content;
   height: fit-content;
   background-color: #00000031;
