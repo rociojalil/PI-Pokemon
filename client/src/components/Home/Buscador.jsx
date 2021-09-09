@@ -1,7 +1,7 @@
 import React from 'react'
 import { useDispatch } from 'react-redux'
 import {  useState } from 'react'
-// import { getBreedsRace } from '../actions/actions';
+import { getId } from '../../actions/actions';
 import styles from './Buscador.module.css';
 
 function Buscador() {
@@ -11,18 +11,11 @@ function Buscador() {
         setBusqueda(b)
     }
 
-    // function buscar(busqueda) {
-    //     getBreedsRace(busqueda)
-    // }
-
     const dispatch = useDispatch()
-
-
-   
 
     function handleSubmit(e) {
         e.preventDefault();
-        dispatch((busqueda))
+        dispatch(getId(busqueda))
     }
 
     // const breed = useSelector((state) => state.breeds)

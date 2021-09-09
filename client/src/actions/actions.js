@@ -35,3 +35,54 @@ export function getTypes() {
             })
     }
 }
+
+export function getId(id) {
+    return async function (dispatch) {
+        return await axios.get('http://localhost:3001/pokemons/?q=' + id)
+            .then(poke => {
+                dispatch({
+                    type: 'GET_POKE_ID',
+                    payload: poke.data.cuarentaPoke
+                })
+
+            })
+    }
+};
+
+export function filter(array) {
+    return {
+        type: 'FILTER',
+        payload: array
+    }
+}
+
+export function getSource(value) {
+    if (value === 'DB') {
+        return {
+            type: 'DB'
+        }
+    } else if (value === 'API') {
+        return {
+            type: 'API'
+        }
+    }
+    else if (value === 'ALL'){
+        return {
+            type: 'ALL'
+        }
+    }
+ 
+}
+
+// export function getBreedsRace(race) {
+//     return function (dispatch) {
+//         return axios.get('http://localhost:3001/dogs?q=' + race)
+//             .then(dog => {
+//                 dispatch({
+//                     type: 'GET_BREEDS_RACE',
+//                     payload: dog.data
+//                 })
+
+//             })
+//     }
+// };

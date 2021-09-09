@@ -26,6 +26,32 @@ const reducer = (state = initialState, action) => {
                     ...state,
                     temps: action.payload
                 }
+            case 'GET_POKE_ID':
+            return {
+                ...state,
+                pokemons: action.payload
+            }
+            case 'FILTER':
+                return {
+                    ...state,
+                    filter: action.payload
+                }
+    
+            case 'DB': 
+                return {
+                    ...state,
+                    filter: state.pokemons.filter(b => b.id.length > 6).sort()
+                }
+            case 'API': 
+                return {
+                    ...state,
+                    filter: state.pokemons.filter(b => b.id < 500).sort()
+                }
+            case 'ALL': 
+                return {
+                    ...state,
+                }
+                   
             default:
                 return {
                     state

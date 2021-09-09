@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/alt-text */
 import styles from './pokecards.module.css'
 import LazyLoad from 'react-lazyload'
 import React from 'react';
@@ -127,27 +128,9 @@ function PokeCards() {
                                     <div className={styles.cardContainer}>
                                         <div className={styles.cardName}>{d.name}</div>
                                         {/* <div className={styles.cardName}>{d.imagen}</div> */}
-                                        <img
-                                            src={d.imagen}
-                                                //  height="74%"
-                                                style={{ objectFit: "contain", borderRadius: "1rem", marginTop: "2vh" }}
+                                        <img className={`${styles.cardName}${styles.imgpoke}`}src={d.imagen}
+                                        style={{ objectFit: "contain", borderRadius: "1rem"}}
                                                  />
-                                        
-
-                                        {/* {d.id.length ?
-                                            
-                                            <LazyLoad><img src='https://phantom-marca.unidadeditorial.es/252acdd64f48851f815c16049a789f23/resize/1320/f/jpg/assets/multimedia/imagenes/2021/04/19/16188479459744.jpg' /></LazyLoad>
-
-                                            :
-
-                                            (d.id === 15 || d.id === 125 || d.id === 212) ?
-                                                <img  alt="Not Found" />
-                                                :
-                                                <img alt="Not Found" />
-
-
-
-                                        } */}
 
                                             <div className={styles.detail}>
                                                 <Link  to={`/pokeid/${d.id}`} style={{ color: "black", textDecoration: "none" }}>
@@ -170,7 +153,7 @@ function PokeCards() {
                 })
 
             ) : <div > 
-                <p className={styles.doggy}>No Pokémon</p>
+                <p className={styles.doggy}>Loading...</p>
                 <iframe src="https://giphy.com/embed/L95W4wv8nnb9K" width="480" height="273" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/L95W4wv8nnb9K">via GIPHY</a></p>
         
               
