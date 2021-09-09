@@ -103,7 +103,7 @@ function PokeCards() {
     const filteredBreeds = useSelector((state) => state.filter);
 
 
-    function displayBreeds(algo) {
+    function displayBreeds(array) {
 
         const breedsToDisplay = array
 
