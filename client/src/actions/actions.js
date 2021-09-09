@@ -1,21 +1,17 @@
 import axios from 'axios'
 
 export function getPokemons() {
-    return function (dispatch) {
-        return axios.get('http://localhost:3001/pokemons')
-            .then(dog => {
-                const order = dog.data.sort((a, b) => {
-                    if (a.name > b.name) return 1
-                    if (a.name < b.name) return -1
-                    return 0
-                })
-                dispatch({
+    return async function (dispatch) {
+      const respuesta = await axios.get('http://localhost:3001/pokemons')
+            return dispatch({
                     type: 'GET_POKEMONS',
-                    payload: order
-                })
-            })
+                    payload: respuesta.data.cuarentaPoke,
+            });
     }
-};
+    }
+            
+    
+
 
 // ese (payload) es lo que me llega del front
 export function postPokemon(payload) {

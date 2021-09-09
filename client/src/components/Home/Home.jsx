@@ -26,13 +26,14 @@ function Home() {
             {/* <div> 
                 <Filters />
             </div> */}
-            {/* <div>
+            <div>
                 <PokeCards />
-            </div> */}
+            </div>
             <br />
             <br />
             <br />
             <br />
+
             <div>
             <Footer/>  
         </div>
