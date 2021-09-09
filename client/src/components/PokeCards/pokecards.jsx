@@ -103,21 +103,21 @@ function PokeCards() {
     const filteredBreeds = useSelector((state) => state.filter);
 
 
-    function displayBreeds(array) {
+    function displayBreeds(algo) {
 
         const breedsToDisplay = array
 
-        if (typeof breedsToDisplay === "string") {
-            return (
-                <div className={styles.cardError}>
+        // if (typeof breedsToDisplay === "string") {
+        //     return (
+                
+        //         <div className={styles.cardError}>
 
-                    <p className={styles.msgError}>We could not find the pokémon </p>
-                    <br />
-                    <img alt="Not Found" height="400px" width="350px" />
-                </div>
-
-            )
-        } else {
+        //             <p className={styles.msgError}>We could not find the pokémon </p>
+        //             <br />
+        //             <img alt="Not Found" height="400px" width="350px" />
+        //         </div>
+        // VER ESTO
+        if (typeof breedsToDisplay === "string" || "array" || "objeto") {
             return breedsToDisplay?.length ? (
                 breedsToDisplay.map(d => {
                     return (
@@ -146,16 +146,14 @@ function PokeCards() {
                             </LazyLoad>
 
 
-
-
                         </div >
                     )
                 })
 
             ) : <div > 
+                
                 <p className={styles.doggy}>Loading...</p>
-                <iframe src="https://giphy.com/embed/L95W4wv8nnb9K" width="480" height="273" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/L95W4wv8nnb9K">via GIPHY</a></p>
-        
+                <iframe src="https://giphy.com/embed/6nWhy3ulBL7GSCvKw6" width="480" height="418" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/surprised-pikachu-6nWhy3ulBL7GSCvKw6">via GIPHY</a></p>
               
           </div>
 
