@@ -47,7 +47,7 @@ function PokeDetail({ match }) {
     
                     <br />
                     <br />
-                    <p className={styles.dogTemp}>Types:</p>
+                    <p className={styles.dogWeight}>Types:</p>
                     <p className={styles.tempBD}>
                     
                     {pokemon?.types.map((t) => t[0].toUpperCase() + t.slice(1))
@@ -63,15 +63,18 @@ function PokeDetail({ match }) {
     
                     <br />
     
-                    <p className={styles.dogWeight}>Vida: <br /> {pokemon?.vida} Kg.</p>
+                    <p className={styles.dogWeight}>Life: <br /> {pokemon?.vida} years</p>
     
-                    <br />
+                  
     
-                    <p className={styles.dogHeight}>Fuerza: <br />{pokemon?.fuerza} cm.</p>
+                    <p className={styles.dogWeight}>Strength: <br />{pokemon?.fuerza} </p>
     
-                    <br />
+                   
     
-                    <p className={styles.dogLife}>Defensa <br /> {pokemon?.defensa}</p>
+                    <p className={styles.dogWeight}>Defense: <br /> {pokemon?.defensa}</p>
+                    <p className={styles.dogWeight}>Speed: <br /> {pokemon?.velocidad}</p>
+                    <p className={styles.dogWeight}>Height: <br /> {pokemon?.altura} cm</p>
+                    <p className={styles.dogWeight}>Weight: <br /> {pokemon?.peso} kg</p>
     
                 </div>
                 </LazyLoad>
