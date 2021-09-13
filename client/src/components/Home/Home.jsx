@@ -1,7 +1,7 @@
 import React from 'react';
 import PokeCards from '../PokeCards/pokecards';
 import Footer from '../Home/Footer';
-import Filters from '../Filtros/filters';
+import Filters from '../Filtros/Order';
 import Nav from '../Home/Nav';
 import styles from './Home.module.css'
 
@@ -23,9 +23,9 @@ function Home() {
             <br />
             <br />
             <br />
-            {/* <div> 
+            <div> 
                 <Filters />
-            </div> */}
+            </div>
             <div>
                 <PokeCards />
             </div>

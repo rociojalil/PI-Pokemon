@@ -41,7 +41,26 @@ const reducer = (state = initialState, action) => {
                     ...state,
                     filter: action.payload
                 }
-    
+            case 'MENOS_FUERZA':
+                    return {
+                        ...state,
+                        pokemons: action.payload
+                    }
+             case 'MAS_FUERZA':
+                        return {
+                            ...state,
+                            pokemons: action.payload
+                        }
+            case 'order_ZA':
+                            return {
+                                ...state,
+                                pokemons: action.payload
+                            }
+            case 'order_AZ':
+                            return {
+                                ...state,
+                                pokemons: action.payload
+                            }
             case 'DB': 
                 return {
                     ...state,

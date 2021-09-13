@@ -114,3 +114,84 @@ export function getSource(value) {
 //             })
 //     }
 // };
+
+export function menosFuerza() {
+    return function (dispatch) {
+        return axios.get('http://localhost:3001/pokemons')
+            .then(dog => {
+                const menosforce = dog.data.cuarentaPoke.sort((a, b) => {
+                    if (typeof dog.data.id === 'string') {
+                        if (a.attack > b.attack) return 1
+                        if (a.attack < b.attack) return -1
+                        return 0
+                    } else {
+                        if (parseInt(a.attack) > parseInt(b.attack)) return 1
+                        if (parseInt(a.attack) < parseInt(b.attack)) return -1
+                        return 0
+                    }
+                })
+                dispatch({
+                    type: 'MENOS_FUERZA',
+                    payload: menosforce
+                })
+            })
+    }
+}
+
+export function masFuerza() {
+    return function (dispatch) {
+        return axios.get('http://localhost:3001/pokemons')
+            .then(dog => {
+                const orderHeavy = dog.data.cuarentaPoke.sort((b, a) => {
+                    if (typeof dog.data.id === 'string') {
+                        if (a.attack > b.attack) return 1
+                        if (a.attack < b.attack) return -1
+                        return 0
+                    } else {
+                        if (parseInt(a.attack) > parseInt(b.attack)) return 1
+                        if (parseInt(a.attack) < parseInt(b.attack)) return -1
+                        return 0
+                    }
+                })
+                dispatch({
+                    type: 'MAS_FUERZA',
+                    payload: orderHeavy
+                })
+            })
+    }
+}
+
+export function getZA() {
+    return function (dispatch) {
+        return axios.get('http://localhost:3001/pokemons')
+            .then(dog => {
+                const orderZA = dog.data.cuarentaPoke.sort((b, a) => {
+                    if (a.name > b.name) return 1
+                    if (a.name < b.name) return -1
+                    return 0
+                })
+                dispatch({
+                    type: 'order_ZA',
+                    payload: orderZA
+                })
+            })
+    }
+}
+
+export function getAZ() {
+    return function (dispatch) {
+        return axios.get('http://localhost:3001/pokemons')
+            .then(dog => {
+                const orderAZ = dog.data.cuarentaPoke.sort((a, b) => {
+                    if (a.name > b.name) return 1
+                    if (a.name < b.name) return -1
+                    return 0
+                })
+                dispatch({
+                    type: 'order_AZ',
+                    payload: orderAZ
+                })
+            })
+    }
+}
+
