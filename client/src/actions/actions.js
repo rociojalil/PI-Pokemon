@@ -5,7 +5,7 @@ export function getPokemons() {
       const respuesta = await axios.get('http://localhost:3001/pokemons')
             return dispatch({
                     type: 'GET_POKEMONS',
-                    payload: respuesta.data.cuarentaPoke,
+                    payload: respuesta.data.cuarentaPoke
             });
     }
     }

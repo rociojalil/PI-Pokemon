@@ -15,7 +15,8 @@ router.get("/", async function (req, res) {
     // si la búsqueda no es por query --> trae los 40 de API
     if (!q) {
         
-            let store = []
+    
+        let store = []
             let array = []
             //recorro hasta 40 poke
             for (let i = 1; i <= 40; i++) {
@@ -44,11 +45,14 @@ router.get("/", async function (req, res) {
                         // return store;
                     }))
                 })
+
+                
                 // }).catch(error => json({ error: "algo pasó!" }))
                 
                 //  acá es donde le digo que me mande 40 (splice)
             
                 res.json({cuarentaPoke: store.splice(0, 40), cuantosQuedan: store.length });
+                
             }
 
     else if (q) {  //búsqueda x query exacta --> trae info desde api o pókemon creado desde BD
@@ -100,6 +104,7 @@ router.get("/", async function (req, res) {
                 ))
             }
         
+    
     }})
 
 
