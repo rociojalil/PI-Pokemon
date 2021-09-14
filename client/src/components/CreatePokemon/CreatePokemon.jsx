@@ -318,31 +318,6 @@ function CreatePokemon(props) {
                         </div>
 
                         <br />
-                        
-                        <div >
-                            <p className={styles.inputNames}>Image:</p>
-                            <input
-                                type="url"
-                                name="imagen"
-                                // placeholder="Paste URL..."
-                                onChange={handleInput}
-                                required='required'
-                                value={input.imagen}
-
-                            ></input>
-                          
-                        </div>
-
-                        <br />
-
-
-
-
-
-
-
-
-
 
                         <div >
                             <p className={styles.inputNames}>Types</p>
