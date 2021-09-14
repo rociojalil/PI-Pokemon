@@ -89,7 +89,7 @@ function CreatePokemon(props) {
         altura: '',
         peso: '',
         types: [],    //array vacío para crear más de uno
-        img: '',
+        imagen: '',
     })
 
     // const dispatch = useDispatch();
@@ -137,7 +137,7 @@ function CreatePokemon(props) {
             altura: '',
             peso: '',
             types: [],    //array vacío para crear más de uno
-            img:''
+            imagen:''
         })
         history.push('/home')
     }
@@ -322,12 +322,12 @@ function CreatePokemon(props) {
                         <div >
                             <p className={styles.inputNames}>Image:</p>
                             <input
-                                type="text"
-                                name="img"
-                                placeholder="Paste URL..."
+                                type="url"
+                                name="imagen"
+                                // placeholder="Paste URL..."
                                 onChange={handleInput}
                                 required='required'
-                                value={input.img}
+                                value={input.imagen}
 
                             ></input>
                           

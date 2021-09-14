@@ -51,6 +51,7 @@ module.exports = (sequelize) => {
     imagen: {
       type: DataTypes.STRING,
     },
+  
 
 
   });

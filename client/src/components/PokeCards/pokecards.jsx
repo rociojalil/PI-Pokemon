@@ -11,9 +11,6 @@ import { Link } from 'react-router-dom';
 
 function PokeCards() {
 
-
-    
-
     // guardar en estados locales
 
     // estado con mi pagina actual seteado en 1
@@ -134,7 +131,7 @@ function PokeCards() {
                                     style={{ objectFit: "contain", borderRadius: "1rem"}}
                                     /> */}
                                    
-                                   <img className={styles.cardName}src={d.imagen? d.imagen : d.img}
+                                   <img className={styles.cardName}src={d.imagen? d.imagen : d.imagen}
                                     style={{ objectFit: "contain", borderRadius: "1rem"}}
                                     />
 

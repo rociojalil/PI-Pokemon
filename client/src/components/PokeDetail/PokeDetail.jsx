@@ -25,6 +25,8 @@ function PokeDetail({ match }) {
 
     const pokemon = useSelector(state => state.detail)
 
+ 
+
 
         return (
             <div className={styles.main}>
@@ -52,12 +54,24 @@ function PokeDetail({ match }) {
                     <br />
                     <p className={styles.dogWeight}>Types:</p>
                     <p className={styles.tempBD}>
-                    
+{/*                     
                     {pokemon?.types.map((t) => t[0].toUpperCase() + t.slice(1))
-                    .join(' - ')} 
-                    {/* {pokemon?.Types.map((t) => t.name)} */}
-            
+                    .join(' - ')}  */}
+                    {pokemon?.Types.map((t) => t.name[0].toUpperCase() + t.name.slice(1))
+                    .join(' - ')}
+        
                     
+                  
+                  
+                    
+
+
+
+            {/* {pokemon?.types.map((t) => t[0].toUpperCase() + t.slice(1))
+                    .join(' - ')} 
+                    {pokemon?.Types.map((t) => t.name[0].toUpperCase() + t.name.slice(1))
+                    .join(' - ')} */}
+            
                     </p>
 
                     {/* <p><br />{pokemon?.types}</p> */}

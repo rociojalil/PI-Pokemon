@@ -12,7 +12,7 @@ const router = Router();
 
 router.post("/", async function (req, res) {
     //me traigo todo x body
-    let { name, vida, fuerza, defensa, velocidad, altura, peso, img, types } = req.body;
+    let { name, vida, fuerza, defensa, velocidad, altura, peso, imagen, types } = req.body;
 // try {
   console.log(req.body);
 
@@ -46,7 +46,7 @@ router.post("/", async function (req, res) {
     velocidad: Number(velocidad),
     altura: Number(altura),
     peso: Number(peso),
-    img: (img),
+    imagen: (imagen),
   });
 
 //  add - set : metodos de belongToMany donde agrego mi otro modelo Types
