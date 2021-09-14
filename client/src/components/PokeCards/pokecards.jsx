@@ -132,7 +132,7 @@ function PokeCards() {
                                     /> */}
                                    
                                    <img className={styles.cardName}src={d.imagen? d.imagen : d.imagen}
-                                    style={{ objectFit: "contain", borderRadius: "1rem"}}
+                                    // style={{ objectFit: "contain", borderRadius: "1rem"}}
                                     />
 
 

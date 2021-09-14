@@ -41,10 +41,11 @@
     text-align: center;
     color: #ffffff;
     text-shadow: 2px 2px 1px #000000;
-    font-size: 22px;
+    font-size: 23px;
     font-weight: bold;
-    letter-spacing: 1px;
+    letter-spacing: 2px;
     margin-bottom: 10px;
+    margin-left: 30px;
 }
 
 .pagination {
