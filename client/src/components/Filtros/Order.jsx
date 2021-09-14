@@ -57,7 +57,7 @@ function Order() {
         let filtered = []
         pokemons?.forEach((b) => {
             if (b.id.length) {
-                b.types.map(t =>
+                b.Types.map(t =>
                     t.name === selectedTemp ? filtered.push(b) : null
                 )
             } else {

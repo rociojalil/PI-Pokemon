@@ -38,7 +38,7 @@ export function getTypes() {
 
 export function getId(id) {
     return async function (dispatch) {
-        return await axios.get('http://localhost:3001/pokemons/?q=' + id)
+        return await axios.get('http://localhost:3001/poke/?q=' + id)
             .then(poke => {
                 dispatch({
                     type: 'GET_POKE_ID',

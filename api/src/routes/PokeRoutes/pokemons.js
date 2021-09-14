@@ -76,7 +76,7 @@ router.get("/", async function (req, res) {
             
 
     if (q) {  //búsqueda x query exacta --> trae info desde api o pókemon creado desde BD
-
+        
             const db = await Pokemon.findOne({
                 where: {
                   name: q,
@@ -98,7 +98,7 @@ router.get("/", async function (req, res) {
                 ];
                 res.json(pokemonDb);
                 
-            } else { 
+            } else  { 
 
             axios.get("https://pokeapi.co/api/v2/pokemon/" + q)
                 .then(response => {
