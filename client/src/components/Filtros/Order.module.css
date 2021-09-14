@@ -92,11 +92,16 @@
     height: 45px;
     outline: none; */
 }
+
+.btn1[type="text"]:hover {
+    color: #fffb0b;
+}
+
 .btn1[type="submit"] {
     background-color: rgb(0, 0, 0);
     font-size: 20px;
     font-weight: bold;
-    color: #ffffff;
+    color: #fffb0b;
     border-radius: 10px;
     border-color: white;
     margin: 10px;
@@ -114,8 +119,8 @@
 }
 
 .btn1[type="submit"]:hover{
-    background-color: rgb(0, 0, 0);
-    color: #fffb0b;
+    background-color: #fffb0b;
+    color: black;
     /* text-shadow: 1px 1px 1px #000000; */
     cursor: pointer;
     

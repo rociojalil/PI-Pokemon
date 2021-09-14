@@ -53,10 +53,9 @@ function PokeDetail({ match }) {
                     <p className={styles.dogWeight}>Types:</p>
                     <p className={styles.tempBD}>
                     
-                    {/* {pokemon?.types.map((t) => t[0].toUpperCase() + t.slice(1))
-                    .join(' - ')} */}
-                    
-                    {pokemon?.Types.map((t) => t.name)}
+                    {pokemon?.types.map((t) => t[0].toUpperCase() + t.slice(1))
+                    .join(' - ')} 
+                    {/* {pokemon?.Types.map((t) => t.name)} */}
             
                     
                     </p>

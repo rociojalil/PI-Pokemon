@@ -4,7 +4,7 @@
 } */
 .navBar {
     display: grid;
-   background-color: rgb(0, 0, 0);
+   background-color: rgba(255, 255, 255, 0.137);
     grid-template-areas: "logo home nav create space again weno weno weno weno";
     /*background-color: #ff9100;
     *//*border-bottom: 4px solid #ff9100;
