@@ -42,7 +42,7 @@ export function getId(id) {
             .then(poke => {
                 dispatch({
                     type: 'GET_POKE_ID',
-                    payload: poke.data.cuarentaPoke
+                    payload: poke.data
                 })
 
             })

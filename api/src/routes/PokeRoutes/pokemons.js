@@ -15,7 +15,25 @@ router.get("/", async function (req, res) {
     // si la búsqueda no es por query --> trae los 40 de API
     if (!q) {
         
-        
+        const db = await Pokemon.findAll({
+            include: Types
+          });
+
+          if (db) {
+            const pokemonDb = [
+              {
+                name: db.name,
+                // types: db.Types.map((e) => e.name),
+                fuerza: db.fuerza,
+                defensa: db.defensa,
+                fuerza: db.fuerza,
+                altura: db.altura,
+                peso: db.peso,
+                id: db.id
+              },
+            ];
+
+
             let store = []
             let array = []
             //recorro hasta 40 poke
@@ -51,7 +69,7 @@ router.get("/", async function (req, res) {
                 
                 //  acá es donde le digo que me mande 40 (splice)
             
-                res.json({cuarentaPoke: store.splice(0,40)});
+                res.json({cuarentaPoke: store.splice(0,40).concat(db)});
                 
             }
 
@@ -106,7 +124,7 @@ router.get("/", async function (req, res) {
                 ))
             }
         
-    
+        }
     }})
 
 
