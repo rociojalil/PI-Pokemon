@@ -128,9 +128,30 @@ function PokeCards() {
                                     <div className={styles.cardContainer}>
                                         <div className={styles.cardName}>{d.name}</div>
                                         {/* <div className={styles.cardName}>{d.imagen}</div> */}
+
+                                        {(d.image === d.image) ?
+                                    <img className={styles.cardName}src={d.imagen}
+                                    style={{ objectFit: "contain", borderRadius: "1rem"}}
+                                    />
+                                    :
+                                    <img src="https://phantom-marca.unidadeditorial.es/252acdd64f48851f815c16049a789f23/resize/1320/f/jpg/assets/multimedia/imagenes/2021/04/19/16188479459744.jpg" alt="Not Found" width="550px" height="300px" />
+                                    } 
+
+
+
+{/* 
                                         <img className={styles.cardName}src={d.imagen}
+
+
+
+
+
+
+
+
+
                                         style={{ objectFit: "contain", borderRadius: "1rem"}}
-                                                 />
+                                                 /> */}
 
                                             <div className={styles.detail}>
                                                 <Link  to={`/pokeId/${d.id}`} style={{ color: "black", textDecoration: "none" }}>

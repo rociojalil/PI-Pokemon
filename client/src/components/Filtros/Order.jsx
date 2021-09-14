@@ -39,7 +39,7 @@ function Order() {
 
     useEffect(() => {
         dispatch(getTypes())
-    }, [])
+    }, [dispatch])
 
     // Filtro Temperament
 
@@ -91,7 +91,7 @@ function Order() {
             <form className={styles.weight}>
                 <select className={styles.btn} onChange={orderWeight} value='' name="by">
                     <option value="" disabled selected>Order by Attack</option>
-                    <option value='menosfuerza'onClick={(e) => menosFuerza(e)}>Min - Max</option>
+                    <option value='menosFuerza'onClick={(e) => menosFuerza(e)}>Min - Max</option>
                     <option value='masFuerza'onClick={(e) => masFuerza(e)}>Max - Min</option>
                 </select>
             </form>
