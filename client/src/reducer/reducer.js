@@ -69,7 +69,7 @@ const reducer = (state = initialState, action) => {
             case 'API': 
                 return {
                     ...state,
-                    filter: state.pokemons.filter(b => b.id < 500).sort()
+                    filter: state.pokemons.filter(b => b.id.length <= 40).sort()
                 }
             case 'ALL': 
                 return {

@@ -91,6 +91,7 @@ export function getSource(value) {
         }
     } else if (value === 'API') {
         return {
+            
             type: 'API'
         }
     }
@@ -101,19 +102,6 @@ export function getSource(value) {
     }
  
 }
-
-// export function getBreedsRace(race) {
-//     return function (dispatch) {
-//         return axios.get('http://localhost:3001/dogs?q=' + race)
-//             .then(dog => {
-//                 dispatch({
-//                     type: 'GET_BREEDS_RACE',
-//                     payload: dog.data
-//                 })
-
-//             })
-//     }
-// };
 
 export function menosFuerza() {
     return function (dispatch) {
