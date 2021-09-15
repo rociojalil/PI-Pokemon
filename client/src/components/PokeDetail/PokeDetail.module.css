@@ -1,35 +1,37 @@
 
 
 .main {
-  background-image: url(../Home/img/fondo.jpg);
+  /* background-image: url(../Home/img/fondo.jpg); */
   background-size:cover;
   background-repeat: no-repeat;
   /* min-height: 100vh;
   height: 100%;
   background-size: 100%; */
-  margin-top: -20px;
+  top: -20px;
   
   
   
 }
 
 .dogImage{
-  width: 20em;
-  margin-left: 50px;
+  width: 15em;
+  margin-left: 80px;
 }
 
 
 .dogDetail {
   position: relative;
-  top: 20%;
+  top: 10%;
   width: 30%;
-  height: fit-content;
-  background-color: #63626231;
+  /* height: 800px; */
+  background-color: #929292cc;
   /* border: 3px solid #000000; */
   margin: auto;
-  padding: 20px;
-  border-radius: 20px;
-  margin-bottom: 50px;
+  /* padding: 20px; */
+   /* border-radius: 20px; */
+   margin-bottom: 50px;  
+   border-radius: 50px;
+    border-color: white;
 }
 
 

@@ -9,6 +9,7 @@ import Footer from '../Home/Footer';
 import styles from './PokeDetail.module.css'
 import LazyLoad from 'react-lazyload'
 import pokeImage from '../Home/img/dragoncito.png';
+import video from './media/videodetalle.mp4'
 
 function PokeDetail({ match }) {
 
@@ -28,65 +29,29 @@ function PokeDetail({ match }) {
 
  
 
-    if(typeof pokemon?.id !== "number"){
+    if(typeof pokemon?.id == "number"){
+        
 
-        return (
-            <div className={styles.main}>
-                <div>
-                    <Nav />
-                </div>
-                <br />
-                <br />
-                <br />
     
-                <LazyLoad>
-
-
-                    
-                <div className={styles.dogDetail}>
-                    <br />
-                    <p className={styles.dogName}><br />{pokemon?.name.toUpperCase()}</p>
-    
-                    <br />
-                    <br />
-
-                    <img className={styles.dogImage} src={pokeImage} alt="Not Found"  />
-    
-                    <br />
-                    <br />
-                    <p className={styles.dogWeight}>Types:</p>
-                    <p className={styles.tempBD}>
-
-                    {pokemon?.Types.map((t) => t.name[0].toUpperCase() + t.name.slice(1))
-                    .join(' - ')}
-            
-                    </p>
-
-                    <br />
-    
-                    <p className={styles.dogWeight}>Life: <br /> {pokemon?.vida} years</p>
-    
-                  
-    
-                    <p className={styles.dogWeight}>Attack: <br />{pokemon?.fuerza} </p>
-    
-                   
-    
-                    <p className={styles.dogWeight}>Defense: <br /> {pokemon?.defensa}</p>
-                    <p className={styles.dogWeight}>Speed: <br /> {pokemon?.velocidad}</p>
-                    <p className={styles.dogWeight}>Height: <br /> {pokemon?.altura} cm</p>
-                    <p className={styles.dogWeight}>Weight: <br /> {pokemon?.peso} kg</p>
-    
-                </div>
-                </LazyLoad>
-                <Footer/>
-            </div>
-    
-        )
-    
-} else  {
     return (
         <div className={styles.main}>
+                    <video
+                    autoPlay
+                    loop
+                    muted
+                    style={{
+                        position: "absolute",
+                        width: "100%",
+                        left: "50%",
+                        top: "60%",
+                        height: "100%",
+                        objectFit: "cover",
+                        transform: "translate(-50%, -50%)",
+                        zIndex: "-1"
+                    }}
+                >
+                <source src={video} type="video/mp4"></source>
+            </video>
             <div>
                 <Nav />
             </div>
@@ -148,28 +113,106 @@ function PokeDetail({ match }) {
                                 } */}
                 <br />
 
-                <p className={styles.dogWeight}>Life: <br /> {pokemon?.vida} years</p>
+                <p className={styles.dogWeight}>Life:  {pokemon?.vida} years</p>
 
               
 
-                <p className={styles.dogWeight}>Attack: <br />{pokemon?.fuerza} </p>
+                <p className={styles.dogWeight}>Attack: {pokemon?.fuerza} </p>
 
                
 
-                <p className={styles.dogWeight}>Defense: <br /> {pokemon?.defensa}</p>
-                <p className={styles.dogWeight}>Speed: <br /> {pokemon?.velocidad}</p>
-                <p className={styles.dogWeight}>Height: <br /> {pokemon?.altura} cm</p>
-                <p className={styles.dogWeight}>Weight: <br /> {pokemon?.peso} kg</p>
+                <p className={styles.dogWeight}>Defense:  {pokemon?.defensa}</p>
+                <p className={styles.dogWeight}>Speed:  {pokemon?.velocidad}</p>
+                <p className={styles.dogWeight}>Height: {pokemon?.altura} cm</p>
+                <p className={styles.dogWeight}>Weight:  {pokemon?.peso} kg</p>
 
             </div>
             </LazyLoad>
             <Footer/>
         </div>
+    
 
     )
 
+
+      
+    
+} else  {
+      return (
+            <div className={styles.main}>
+                 <video
+                    autoPlay
+                    loop
+                    muted
+                    style={{
+                        position: "absolute",
+                        width: "100%",
+                        left: "50%",
+                        top: "60%",
+                        height: "100%",
+                        objectFit: "cover",
+                        transform: "translate(-50%, -50%)",
+                        zIndex: "-1"
+                    }}
+                >
+                <source src={video} type="video/mp4"></source>
+            </video>
+                <div>
+                    <Nav />
+                </div>
+                <br />
+                <br />
+                <br />
+    
+                <LazyLoad>
+
+
+                    
+                <div className={styles.dogDetail}>
+                    <br />
+                    <p className={styles.dogName}><br />{pokemon?.name.toUpperCase()}</p>
+    
+                    <br />
+                    <br />
+
+                    <img className={styles.dogImage} src={pokeImage} alt="Not Found"  />
+    
+                    <br />
+                    <br />
+                    <p className={styles.dogWeight}>Types:</p>
+                    <p className={styles.tempBD}>
+
+                    {pokemon?.Types.map((t) => t.name[0].toUpperCase() + t.name.slice(1))
+                    .join(' - ')}
+            
+                    </p>
+
+                
+    
+                    <p className={styles.dogWeight}>Life:  {pokemon?.vida} years</p>
+    
+                  
+    
+                    <p className={styles.dogWeight}>Attack: {pokemon?.fuerza} </p>
+    
+                   
+    
+                    <p className={styles.dogWeight}>Defense:  {pokemon?.defensa}</p>
+                    <p className={styles.dogWeight}>Speed:  {pokemon?.velocidad}</p>
+                    <p className={styles.dogWeight}>Height:  {pokemon?.altura} cm</p>
+                    <p className={styles.dogWeight}>Weight: {pokemon?.peso} kg</p>
+    
+                </div>
+                </LazyLoad>
+                <Footer/>
+            </div>
+
+        )
+                    }
+
+
 }
-}
+
 
     
 export default PokeDetail;
