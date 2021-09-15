@@ -145,10 +145,11 @@ function PokeCards() {
                                     // style={{ objectFit: "contain", borderRadius: "1rem"}}
                                     />
                                     
-                                    {/* <div className={styles.cardType}> Types: <br/>
+                                    <div className={styles.cardType}> Types: <br/>   </div>
+                                    <div className={styles.types}>
                                      {d?.types.map((t) => t[0].toUpperCase() + t.slice(1))
                                         .join(' - ')}  
-                                        </div> */}
+                                        </div>
 
 
 {/* 

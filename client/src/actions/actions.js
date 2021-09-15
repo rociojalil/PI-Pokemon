@@ -49,16 +49,7 @@ export function getId(id) {
     }
 };
 
-// export function getPokemons() {
-//     return async function (dispatch) {
-//       const respuesta = await axios.get('http://localhost:3001/pokemons')
-//             return dispatch({
-//                     type: 'GET_POKEMONS',
-//                     payload: respuesta.data.cuarentaPoke
-//             });
-//     }
-//     }
-       
+
 
 
 
