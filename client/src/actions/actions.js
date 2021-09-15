@@ -49,18 +49,18 @@ export function getId(id) {
     }
 };
 
-// export function getById(id) {
-//     return function (dispatch) {
-//         return axios.get(`http://localhost:3001/pokeId` + id)
-//             .then(poke => {
-//                 dispatch({
-//                     type: 'GET_ID',
-//                     payload: poke.data
-//                 })
-//             })
+// export function getPokemons() {
+//     return async function (dispatch) {
+//       const respuesta = await axios.get('http://localhost:3001/pokemons')
+//             return dispatch({
+//                     type: 'GET_POKEMONS',
+//                     payload: respuesta.data.cuarentaPoke
+//             });
 //     }
+//     }
+       
 
-// };
+
 
 export function getById(id) {
     return async function(dispatch) {

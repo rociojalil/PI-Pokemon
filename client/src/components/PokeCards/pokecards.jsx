@@ -24,8 +24,17 @@ function PokeCards() {
     // todos dogs que van a estar en la pagina actual me los traigo con useSelector
     const breed = useSelector((state) => state.pokemons);
     // slice: toma porcion el [] - que agarre el primero(0) y el ultimo (7 o 8)? toma el ultimo o no lo toma
-    const currentItems = breed?.slice(indexOfFirstItem, indexOfLastItem);
+     const currentItems = breed?.slice(indexOfFirstItem, indexOfLastItem);
 
+    //  const [pokemone, setPokemon] = useState([])
+    //  const [pokemones, setPokemons] = useState([])
+    //  const [contador, setContador] = useState(1)
+    //  const [inicio, setInicio] = useState(0)
+    //  const [final, setFinal] = useState(0)
+    //  const [inicioBack, setInicioBack] = useState(0)
+    //  const [finalBack, setFinalBack] = useState(0)
+    //  const [clickNext, setClickNext] = useState(0)
+    //  const [clickBack, setClickBack] = useState(0)
 
     const handleClick = (event) => {
         setCurrentPage(Number(event.target.id))
@@ -125,6 +134,7 @@ function PokeCards() {
                                     <div className={styles.cardContainer}>
                                         <div className={styles.cardName}>{d.name}</div>
                                         {/* <div className={styles.cardName}>{d.imagen}</div> */}
+                                        <div className={styles.cardAttack}>Attack: {d.fuerza}</div>
 
                                         
                                     {/* <img className={styles.cardName}src={d.imagen}
@@ -134,16 +144,15 @@ function PokeCards() {
                                    <img className={styles.cardName}src={d.imagen? d.imagen : d.imagen}
                                     // style={{ objectFit: "contain", borderRadius: "1rem"}}
                                     />
+                                    
+                                    {/* <div className={styles.cardType}> Types: <br/>
+                                     {d?.types.map((t) => t[0].toUpperCase() + t.slice(1))
+                                        .join(' - ')}  
+                                        </div> */}
 
 
 {/* 
                                         <img className={styles.cardName}src={d.imagen}
-
-
-
-
-
-
 
 
 
@@ -168,7 +177,9 @@ function PokeCards() {
                     )
                 })
 
-            ) : <div > 
+            ) :
+            
+            <div > 
                 
                 <p className={styles.doggy}>Loading...</p>
                 <iframe src="https://giphy.com/embed/6nWhy3ulBL7GSCvKw6" width="480" height="418" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/surprised-pikachu-6nWhy3ulBL7GSCvKw6">via GIPHY</a></p>

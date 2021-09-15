@@ -39,17 +39,49 @@ router.get("/", async function (req, res) {
             .then(response => {
 
                 let pokemon = response.data
+                const cuarentaPoke = [
 
-                res.json({
+               {
                     name: pokemon.name,
                     types: pokemon.types.map((e) => e.type.name),
                     imagen: pokemon.sprites.other["official-artwork"].front_default,
                     fuerza: pokemon.stats[1].base_stat,
                     id: pokemon.id
 
-                })
+                },
+              ];
+              res.json(cuarentaPoke);
             })
 
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            
             .catch(() => res.json(
                 {
                     name: "Not Found",

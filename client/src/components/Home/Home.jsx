@@ -1,5 +1,5 @@
 import React from 'react';
-import PokeCards from '../PokeCards/pokecards';
+import PokeCards from '../PokeCards/pokecards'
 import Footer from '../Home/Footer';
 import Filters from '../Filtros/Order';
 import Nav from '../Home/Nav';

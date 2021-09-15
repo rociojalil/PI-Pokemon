@@ -103,7 +103,7 @@ function Order() {
                     <option value="" disabled selected>Filter by Types...</option>
                     {temp?.map(t => {
                         return (
-                            <option  value={t.name}>{t.name}</option>
+                            <option  value={t.name}>{t.key}{t.name}</option>
                         )
                         })}
                     

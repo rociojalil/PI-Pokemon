@@ -45,7 +45,28 @@
     font-weight: bold;
     letter-spacing: 2px;
     margin-bottom: 10px;
-    margin-left: 30px;
+    margin-left: 27px;
+}
+
+.cardAttack {
+    text-align: center;
+    color: #f7e70a;
+    text-shadow: 2px 2px 1px #000000;
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+    margin-left: 25px;
+}
+.cardType {
+    text-align: center;
+    color: #ffffff;
+    text-shadow: 2px 2px 1px #000000;
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: -15px;
+    margin-left: 25px;
 }
 
 .pagination {
